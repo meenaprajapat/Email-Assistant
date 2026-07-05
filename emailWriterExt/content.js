@@ -1,3 +1,9 @@
+// Backend API base URL.
+// Local dev:   http://localhost:8080
+// Production:  https://email-writer-sb.onrender.com
+// Switch this line depending on which backend you want the extension to use.
+const API_BASE_URL = 'https://email-writer-sb.onrender.com';
+
 function createAIButton() {
    const button = document.createElement('div');
    button.className = 'T-I J-J5-Ji aoO v7 T-I-atl L3';
@@ -61,7 +67,7 @@ function injectButton() {
             button.disabled = true;
 
             const emailContent = getEmailContent();
-            const response = await fetch('http://localhost:8080/api/email/generate', {
+            const response = await fetch(`${API_BASE_URL}/api/email/generate`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -1,0 +1,14 @@
+# Render Blueprint for the Email Assistant Spring Boot backend.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: email-writer-sb
+    runtime: docker
+    dockerfilePath: ./email-writer-sb/Dockerfile
+    dockerContext: ./email-writer-sb
+    plan: free
+    envVars:
+      - key: GEMINI_URL
+        sync: false   # set in Render dashboard
+      - key: GEMINI_KEY
+        sync: false   # set in Render dashboard (secret)
