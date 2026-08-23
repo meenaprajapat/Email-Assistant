@@ -12,14 +12,6 @@ dist
 dist-ssr
 *.local
 
-# Local env files (do not commit secrets/URLs)
-.env
-.env.local
-.env.*.local
-!.env.example
-# .env.production holds only the public backend URL (no secrets) so it is committed
-!.env.production
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
