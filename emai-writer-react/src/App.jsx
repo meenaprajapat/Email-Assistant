@@ -19,8 +19,7 @@ import {
   createTheme,
   ThemeProvider
 } from '@mui/material';
-import Brightness4 from '@mui/icons-material/Brightness4';
-import Brightness7 from '@mui/icons-material/Brightness7';
+import { Brightness4, Brightness7 } from '@mui/icons-material';
 import axios from 'axios';
 
 function App() {
@@ -35,8 +34,7 @@ function App() {
     setLoading(true);
     setError('');
     try {
-      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
-      const response = await axios.post(`${apiBaseUrl}/api/email/generate`, {
+      const response = await axios.post("http://localhost:8080/api/email/generate", {
         emailContent,
         tone
       });
