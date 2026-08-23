@@ -32,7 +32,6 @@ Email-Assistant/
 ├── email-writer-sb/       # Spring Boot backend
 ├── emai-writer-react/     # React + Vite web app
 ├── emailWriterExt/        # Chrome extension
----
 
 ## 🚀 Run Locally
 
@@ -42,7 +41,7 @@ Requires **Java 21** and a **Gemini API key**.
 
 ```bash
 cd email-writer-sb
-./mvnw spring-boot:run
+mvnw.cmd spring-boot:run
 ```
 
 Set your Gemini API key as an environment variable before starting the backend.
